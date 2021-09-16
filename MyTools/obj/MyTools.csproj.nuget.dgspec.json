@@ -56,6 +56,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[6.0.0-rc.1.21451.13, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             }
           },
           "imports": [

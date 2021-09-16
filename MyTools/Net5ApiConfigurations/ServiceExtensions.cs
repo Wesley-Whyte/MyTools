@@ -9,6 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Diagnostics;
+using Serilog;
+using Newtonsoft.Json;
 
 namespace MyTools.Net5ApiConfigurations
 {
@@ -119,6 +124,41 @@ namespace MyTools.Net5ApiConfigurations
             });
         }
 
+        public static void CongigureExceptionHandler(this IApplicationBuilder app)
+        {
+            app.UseExceptionHandler(error =>
+            {
+                error.Run(async context =>
+                {
+                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                    context.Response.ContentType = "application.json";
+                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
 
+                    if (contextFeature != null)
+                    {
+                        Log.Error($"Something went wrong int the {contextFeature.Error}");
+
+                        await context.Response.WriteAsync(new Error
+                        {
+                            StatusCode = context.Response.StatusCode,
+                            Message = "Internal Server error. Please try again"
+                        }.ToString());
+                    }
+                });
+            });
+        }
+
+    }
+
+    public class Error
+    {
+        public int StatusCode { get; set; }
+
+        public string Message { get; set; }
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
     }
 }
