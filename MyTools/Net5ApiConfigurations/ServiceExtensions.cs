@@ -124,6 +124,10 @@ namespace MyTools.Net5ApiConfigurations
             });
         }
 
+        /// <summary>
+        /// Configures Exception handling middleware
+        /// </summary>
+        /// <param name="app"></param>
         public static void CongigureExceptionHandler(this IApplicationBuilder app)
         {
             app.UseExceptionHandler(error =>
@@ -145,6 +149,20 @@ namespace MyTools.Net5ApiConfigurations
                         }.ToString());
                     }
                 });
+            });
+        }
+
+        /// <summary>
+        /// Configures API Versioning services
+        /// </summary>
+        /// <param name="services"></param>
+        public static void ConfigureVersioning(IServiceCollection services)
+        {
+            services.AddApiVersioning(x =>
+            {
+                x.ReportApiVersions = true;
+                x.AssumeDefaultVersionWhenUnspecified = true;
+                x.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
             });
         }
 

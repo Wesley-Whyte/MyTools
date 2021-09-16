@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MS1ZF5sbnlm+8OP/WUMzsh9hx2/qu7nBWFHcIiTLcDutIO/7KD+UoWHVWxFughmUYKXFO4NaLIamY9LssYda1w==",
+  "dgSpecHash": "gXUhAj0ZXQW9TsACFUC8/dmftKcs8pvMxz5La8cpcxq6XQja1jXgm8PV5ZXdz7xeIlYP1WmVMhr4MmFGabXrtg==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\MyTools.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.2.0\\microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.4\\microsoft.dotnet.platformabstractions.2.0.4.nupkg.sha512",
