@@ -14,8 +14,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Diagnostics;
 using Serilog;
 using Newtonsoft.Json;
+using AspNetCoreRateLimit;
 
-namespace MyTools.Net5ApiConfigurations
+namespace 
+    Tools.Net5ApiConfigurations
 {
     public static class ServiceExtensions
     {
@@ -165,6 +167,53 @@ namespace MyTools.Net5ApiConfigurations
                 x.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
             });
         }
+
+        /// <summary>
+        /// Configures API Rate limiting services with my default rules
+        /// Requires IpRateLimitng middleware
+        /// </summary>
+        /// <param name="services"></param>
+        public static void ConfigureRateLimiiting(this IServiceCollection services)
+        {
+            var rateLimitRules = new List<RateLimitRule>
+            {
+                new RateLimitRule
+                {
+                    Endpoint = "*",
+                    Limit = 1,
+                    Period = "5s"
+                }
+            };
+
+            services.Configure<IpRateLimitOptions>(o =>
+            {
+                o.GeneralRules = rateLimitRules;
+            });
+
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
+        }
+
+        /// <summary>
+        /// Configures API Rate limiting services
+        /// Requires IpRateLimitng middleware
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="rateLimitRules">Rules for rate limiting</param>
+        public static void ConfigureRateLimiiting(this IServiceCollection services, List<RateLimitRule> rateLimitRules)
+        {
+            services.Configure<IpRateLimitOptions>(o =>
+            {
+                o.GeneralRules = rateLimitRules;
+            });
+
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+        }
+
 
     }
 

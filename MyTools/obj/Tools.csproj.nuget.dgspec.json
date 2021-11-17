@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\MyTools.csproj": {}
+    "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\Tools.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\MyTools.csproj": {
+    "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\MyTools.csproj",
-        "projectName": "MyTools",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\MyTools.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\Tools.csproj",
+        "projectName": "Tools",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\Tools.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\obj\\",
         "projectStyle": "PackageReference",
