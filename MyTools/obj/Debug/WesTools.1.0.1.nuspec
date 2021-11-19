@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WesTools</id>
+    <version>1.0.1</version>
+    <authors>Wesley Emuobonuvie</authors>
+    <description>Simple tools to make working with c# easier</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="AspNetCoreRateLimit" version="4.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="5.0.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Identity" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Versioning" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="6.0.0-rc.1.21451.13" exclude="Build,Analyzers" />
+        <dependency id="Serilog.AspNetCore" version="4.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\User\source\repos\MyTools\MyTools\bin\Debug\net5.0\Tools.dll" target="lib\net5.0\Tools.dll" />
+  </files>
+</package>

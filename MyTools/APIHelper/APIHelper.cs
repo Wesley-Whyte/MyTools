@@ -17,5 +17,13 @@ namespace Tools.APIHelper
             Client.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
+
+        public static void ClientInit(string baseurl)
+        {
+            Client.BaseAddress = new Uri(baseurl);
+            Client.DefaultRequestHeaders.Accept.Clear();
+            Client.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+        }
     }
 }

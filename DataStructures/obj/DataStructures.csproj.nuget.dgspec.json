@@ -27,7 +27,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/IamWesley/_packaging/IamWesley/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/IamWesley/_packaging/MyCustomFeed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {

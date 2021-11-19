@@ -4585,10 +4585,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\Tools.csproj",
-      "projectName": "Tools",
+      "projectName": "WesTools",
       "projectPath": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\Tools.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\source\\repos\\MyTools\\MyTools\\obj\\",
@@ -4607,7 +4607,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/IamWesley/_packaging/IamWesley/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/IamWesley/_packaging/MyCustomFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {

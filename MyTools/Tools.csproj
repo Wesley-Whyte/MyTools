@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <Authors>Wesley Emuobonuvie</Authors>
+    <Company>IamWesley</Company>
+    <Description>Simple tools to make working with c# easier</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>WesTools</PackageId>
+    <Product>WesTools</Product>
   </PropertyGroup>
 
   <ItemGroup>
